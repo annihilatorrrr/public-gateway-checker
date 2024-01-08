@@ -1,14 +1,18 @@
 import { Cors } from './Cors';
 import { Flag } from './Flag';
+import { IPNSCheck } from './Ipns';
 import { Origin } from './Origin';
-import type { Results } from './Results';
 import { Status } from './Status';
+import { Trustless } from './Trustless';
 import { UiComponent } from './UiComponent';
+import type { Results } from './Results';
 declare class GatewayNode extends UiComponent {
     readonly parent: Results;
     status: Status;
     cors: Cors;
+    ipns: IPNSCheck;
     origin: Origin;
+    trustless: Trustless;
     link: HTMLDivElement & {
         url?: URL;
     };
